@@ -73,7 +73,7 @@ class CircuitSampler(ConverterBase):
             QuantumInstance(backend=backend)
         self._statevector = statevector if statevector is not None \
             else self.quantum_instance.is_statevector
-        self._param_qobj = param_qobj
+        self._param_qobj = False
         self._attach_results = attach_results
 
         self._check_quantum_instance_and_modes_consistent()
